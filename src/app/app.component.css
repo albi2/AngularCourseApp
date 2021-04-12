@@ -1,0 +1,12 @@
+.container {
+  display: grid;
+  grid-template-columns: 4vw 95vw ;
+  height: 100vh;
+}
+
+.mainContainer{
+  height: 100%;
+  width: 100%;
+  background-color:#f2f2f0;
+}
+

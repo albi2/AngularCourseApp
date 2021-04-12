@@ -1,0 +1,18 @@
+<div class="allCourseContainer">
+  <div class="categories">
+    <span>Course ID</span>
+    <span>Courses Names</span>
+    <span>Credits</span>
+    <span>Instructor</span>
+    <span>Number Of Students</span>
+  </div>
+  <div class="coursesList">
+    <div class="courseItem" *ngFor="let course of courses">
+      <span>{{ course.id}}</span>
+      <span>{{ course.courseName}}</span>
+      <span>{{ course.credits }}</span>
+      <span>{{ course.lecturer }}</span>
+      <span>{{ course.noOfStudents }}</span>
+    </div>
+  </div>
+</div>

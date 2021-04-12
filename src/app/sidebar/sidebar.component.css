@@ -1,0 +1,21 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  align-items: center;
+  padding-top:20px
+}
+
+.icon {
+  margin-top: 25px;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: black;
+}
+
+.signout {
+  margin-top: auto;
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+}
