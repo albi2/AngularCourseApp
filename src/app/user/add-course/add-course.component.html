@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="add-container">
+    <app-add-course-form (edited)="edit($event)" (addRequest)="push($event)" (removeRequest)="remove($event)" ></app-add-course-form>
+  </div>
+  <app-form-course-list  (removeRequest)="remove($event)"
+  [dataSource]="data" (editRequested)="editReqReceived($event)"></app-form-course-list>
+</div>

@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+  }
+.course-sidebar{
+    background-color: white;
+    height: 100%;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+h2{
+    color: #4a60b7;
+}
+
+.dates {
+    color: #333;
+}
+
+.data{
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+.data div {
+    padding: 10px 0;
+}
+
+.dsc {
+    display: inline-block;
+    margin-right: 10px;
+    color: #4a60b7;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+@media (max-width: 1300px) {
+    .course-sidebar{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        width: 80vw;;
+    }
+}

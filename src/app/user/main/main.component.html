@@ -1,0 +1,19 @@
+<div class="section" (click)="setSelected(null)">
+  <div class="mainContainer">
+    <div class="header">
+      <h1>Welcome, Name Surname!</h1>
+      <button  matRipple
+      matRippleCentered="true" class="btn" mat-fab >
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+    <div class="courseContainer">
+      <div class="course-container-header">
+        <h2>Courses</h2>
+        <div class="bottom-line"></div>
+      </div>
+      <app-courses-component (selected)="setSelected($event)"></app-courses-component>
+    </div>
+  </div>
+  <app-course-sidebar @filterAnimation *ngIf="selectedCourse" [course]="selectedCourse"></app-course-sidebar>
+</div>

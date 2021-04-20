@@ -1,0 +1,97 @@
+<div class="add-course">
+    <mat-vertical-stepper class="add-course" [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="courseIdGroup">
+            <form [formGroup]="courseIdGroup">
+                <ng-template matStepLabel>Fill out course ID</ng-template>
+                <mat-form-field>
+                    <mat-label>ID</mat-label>
+                    <input matInput placeHolder="Course ID" formControlName="courseId" required>
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="courseNameGroup">
+          <form [formGroup]="courseNameGroup">
+            <ng-template matStepLabel>Fill out course name</ng-template>
+            <mat-form-field>
+              <mat-label>Course Name</mat-label>
+              <input matInput placeholder="Course Name" formControlName="courseName" required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="courseCreditsGroup">
+          <form [formGroup]="courseCreditsGroup">
+            <ng-template matStepLabel>Fill out credits number</ng-template>
+            <mat-form-field>
+              <mat-label>Credits</mat-label>
+              <input matInput formControlName="courseCredits" placeholder="Credits No."
+                     required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="courseLecturerGroup">
+            <form [formGroup]="courseLecturerGroup">
+              <ng-template matStepLabel>Fill out full lecturer name</ng-template>
+              <mat-form-field>
+                <mat-label>Lecturer</mat-label>
+                <input matInput formControlName="courseLecturer" placeholder="Lecturer name and surname"
+                       required>
+              </mat-form-field>
+              <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+              </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="courseDescriptionGroup">
+          <form [formGroup]="courseDescriptionGroup">
+            <ng-template matStepLabel>Fill out course description</ng-template>
+            <mat-form-field>
+              <mat-label>Description</mat-label>
+              <textarea rows="7" cols="10" matInput formControlName="courseDescription" placeholder="Course Description">
+              </textarea>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="courseStartDateGroup">
+          <form [formGroup]="courseStartDateGroup">
+            <ng-template matStepLabel>Fill out course start date</ng-template>
+            <mat-form-field appearance="fill">
+              <mat-label>Start Date</mat-label>
+              <input matInput [matDatepicker]="picker" formControlName="courseStartDate">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Done</ng-template>
+          <p>You are now done.</p>
+          <div>
+            
+            <button *ngIf="isLinear" mat-button (click)="addCourse(); stepper.reset()">Add Course</button>
+            <button *ngIf="!isLinear" mat-button (click)="editCourse(); stepper.reset()">Edit Course</button>
+
+            <button mat-button (click)="stepper.reset()">Reset</button>
+          </div>
+        </mat-step>
+    </mat-vertical-stepper>
+  </div>

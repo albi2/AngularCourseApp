@@ -1,0 +1,7 @@
+.courses {
+  padding: 20px 0;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

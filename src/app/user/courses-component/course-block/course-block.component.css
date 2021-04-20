@@ -1,0 +1,54 @@
+.courseBlock {
+  position: relative;
+  padding: 0 7px 16px 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #dbd9de;
+  width: 200px;
+  height: 220px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.courseBlock:hover .sideColor{
+  width: 100%;
+}
+
+.courseBlock:hover{
+  color: white;
+}
+
+h4 {
+  font-size: 1.3rem;
+  position: relative;
+  z-index: 100;
+}
+
+.sideColor {
+  position: absolute;
+  height: 100%;
+  width: 7px;
+  background-color: #4a60b7;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.courseInfo {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  z-index: 100;
+  position: relative;
+}
+
+.courseInfo li{
+  padding: 5px 0;
+}
+
+.lastUpdated {
+  z-index: 100;
+  color:#6b6b6b;
+}

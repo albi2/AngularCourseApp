@@ -1,0 +1,15 @@
+<div class="sidebar">
+  <a class="icon"  routerLinkActive="active" *ngFor="let icon of icons"  [routerLink]="icon.path"  routerLinkActive="active">
+    
+    <mat-icon matRipple matRippleColor="rgba(74, 96, 183,0.2)" 
+    [inline]="true" matRippleUnbounded="true"
+     class="material-icons">
+      {{ icon.icon}}
+    </mat-icon>
+  </a>
+  <a  class="signout" >
+    <mat-icon [inline]="true" class="material-icons-outlined">
+      logout
+    </mat-icon>
+  </a>
+</div>

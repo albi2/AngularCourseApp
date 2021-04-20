@@ -1,0 +1,16 @@
+<div appStopClick class="course-sidebar">
+    <h2>{{ course.courseName }}</h2>
+    <div class="dates">
+        <div class="startDate">Start Date: {{ course.startDate | date }}</div>
+        <div class="lastUpdate">Last Updated: {{ course.lastUpdated | date }}</div>
+    </div>
+    <div class="data">
+        <div><span class="dsc">ID: </span>{{ course.id }}</div>
+        <div><span class="dsc">Credits: </span>{{ course.credits }}</div>
+        <div><span class="dsc">Lecturer: </span>{{ course.lecturer }}</div>
+        <div><span class="dsc">Number Of Students: </span>{{ course.noOfStudents }}</div>
+        <div class="description">
+            <span class="dsc">Description: </span>{{ course.description ? course.description : 'No Description!' }}
+        </div>
+    </div>
+</div>

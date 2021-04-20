@@ -1,0 +1,10 @@
+<div class="searchBar">
+  <div class="search-icon">
+    <mat-icon [inline]="true">search</mat-icon>
+  </div>
+  <div  class="formControl" >
+      <input matInput class="inputControl" #searchIn (keyup.enter)="search(searchIn.value)"  
+      type="text" id="key" placeholder="Quick Search">
+  </div>
+</div>
+

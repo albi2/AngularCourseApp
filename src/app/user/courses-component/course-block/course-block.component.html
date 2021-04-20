@@ -1,0 +1,16 @@
+<div class="courseBlock">
+  <div appStopClick (click)="selectCourse(course)" class="sideColor"  matRipple
+  [matRippleCentered]="centered" matRippleColor="rgba(226, 216, 235,0.2)"></div>
+  <h4>{{course.courseName}}</h4>
+  <!--
+  <ul class="courseInfo" >
+    <li>CourseID: {{course.id}}</li>
+    <li>Credits: {{course.credits}}</li>
+    <li>Lecturer: {{course.lecturer}}</li>
+    <li>Number Of Students: {{course.noOfStudents}}</li>
+  </ul>
+    -->
+  <div class="lastUpdated">
+    Last Updated: {{ course.lastUpdated | date}}
+  </div>
+</div>

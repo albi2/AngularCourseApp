@@ -1,0 +1,32 @@
+<div class="allCourseContainer">
+  <div class="categories">
+    <div class="number">Course ID</div>
+    <div class="string">Course Name</div>
+    <div class="number">Credits</div>
+    <div class="string">Instructor</div>
+    <div class="description">Description</div>
+    <div class="enrollBtn">Enroll</div>
+    <div class="status">Status</div>
+  </div>
+  <div class="coursesList">
+    <div class="courseItem" (click)="setSelected(course.id)" *ngFor="let course of courses"
+    [class.selected]="course.id===selected">
+      <div class="number"><span class="dsc">ID:</span> {{ course.id}}</div>
+      <div class="string"><span class="dsc">Course Name: </span> {{ course.courseName}}</div>
+      <div class="number"><span class="dsc">Credits: </span> {{ course.credits }}</div>
+      <div class="string"><span class="dsc">Lecturer: </span> {{ course.lecturer }}</div>
+      <div class="description"><span class="dsc">Description: </span> {{ course.description ? course.description.substring(0,30)+'...': 'No description' }}</div>
+      <div class="enrollBtn"><button (click)="enroll(course._id)" matRipple matRippleColor="rgba(226, 216, 235,0.2)"
+        matRippleCentered="true"
+         class="btn" class="add-btn" mat-button color="primary">Enroll</button>
+      </div>
+      <mat-chip-list class="status">
+        <mat-chip class="chip">
+          {{ calculateWeeks(course.startDate) }}
+        </mat-chip>
+      </mat-chip-list>
+      <div class="sideColor" *ngIf="course.id===selected"></div>
+    </div>
+  </div>
+</div>
+

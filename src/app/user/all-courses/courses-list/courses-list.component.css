@@ -1,0 +1,138 @@
+.categories {
+  margin-top: 40px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  flex-wrap: wrap;
+}
+
+.categories span:first-of-type , .coursesList span:first-of-type {
+  text-align: left;
+}
+
+.number {
+  width: 70px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.string {
+  width: 130px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.enrollBtn {
+  width: 130px;
+}
+
+.courseItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 5px;
+  border-radius: 7px;
+  font-size: 1.2rem;
+  color: #5c5c5c;
+  padding: 15px 10px;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.add-btn {
+  background-color: #4a60b7;
+  font-size: 1.1rem;
+  color: white;
+  width: 130px;
+  padding: 5px;
+}
+
+.selected {
+  box-shadow: 0px 10px 30px 3px rgba(106, 43, 252,0.4);
+  z-index: 101;
+}
+
+.sideColor {
+  position:absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 7px;
+  background-color: #4a60b7;
+}
+
+.description {
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width:300px;
+  overflow: hidden;
+}
+
+.status {
+  width: 100px;
+  text-align: left;
+}
+
+
+.chip {
+  color: #546eff;
+  background-color: rgba(197, 203, 227,0.3);
+}
+
+.dsc {
+  display: none;
+}
+
+@media(max-width: 1100px) {
+  .categories {
+    display: none;
+  }
+
+  .courseItem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: auto;
+    margin-top: 20px;
+    padding: 20px; 
+  }
+
+  .courseItem div{ 
+    margin-bottom: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .description {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .sideColor {
+    display: none !important;
+  }
+
+  .dsc {
+    display: inline-block;
+    margin-right: 10px;
+    color: #4a60b7;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .add-btn {
+    align-self: center;
+  }
+
+
+}
